@@ -41,23 +41,57 @@
             border: 0;
             padding: 10px;
         }
+        .profile-section {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: left;
+            gap: 40px;
+        }
+
         .profile-pic {
-            max-width: 65%;
+            max-width: 225px;
             height: auto;
             border: 7px solid #4b3f2f;
+            border-radius: 10px;
             transition: transform 0.3s;
         }
+
+        .profile-text {
+            width: 100%;
+            max-width: 600px;
+            
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .profile-pic {
+                max-width: 50%;
+            }
+        }
+
         .profile-pic:hover {
-            transform: scale(1.1);
+            transform: scale(1.03);
+        }
+        p {
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
         }
         h1, h2 {
-            font-family: 'Times New Roman', serif;
+            font-family: 'Open Sans', 'Oswald';
             color: #a67c52;
             text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
             text-align: center;
         }
         h3 {
-            font-family: 'Times New Roman', serif;
+            font-family: 'Open Sans', sans-serif;
             text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
             text-align: center;
         }
@@ -71,6 +105,7 @@
         }
         li {
             text-align: center;
+            font-family: 'Open Sans', sans-serif;
         }
         marquee {
             behavior: scroll;
@@ -85,7 +120,7 @@
         .info-table th {
             border: 1px solid black;
             background-color: #c2a36b;
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Open Sans', sans-serif;
         }
         .no-bg {
             background-color: transparent !important;
@@ -95,7 +130,7 @@
         }
         .info-table td {
             border: 1px solid black;
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Open Sans', sans-serif;
         }
         a {
             color: blue;
@@ -106,7 +141,11 @@
             color: darkblue;
         }
         iframe {
-            border: 0;
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border: 5px;
             border-radius: 20px;
             overflow: hidden;
         }
@@ -123,24 +162,21 @@
     </table>
     <hr>
     <center>
-        <table class="centered">
-            <tr>
-                <td align="center" width="30%">
-                    <img src="WhatsApp Image 2025-02-18 at 10.54.04_61fb8263.jpg" alt="Foto Profil" class="profile-pic" title="ADUHHH GANTENGNYAA">
-                </td>
-                <td width="70%">
-                    <h2>☉ Tentang Saya ☉</h2>
-                    <p><font face="Comic Sans MS, cursive">Saya adalah mahasiswa Sistem Informasi di Fakultas Ilmu Komputer, Universitas Brawijaya, dengan minat di bidang pemrograman dan Manajemen Bisnis. Selama kuliah, saya semakin tertarik pada analisis, memahami berbagai jenis dan penerapannya dalam bisnis, serta manajemen operasional untuk mengelola bisnis secara efektif.
+        <div class="profile-section">
+            <img src="WhatsApp Image 2025-02-18 at 10.54.04_61fb8263.jpg" 
+                 alt="Foto Profil" class="profile-pic" title="ADUHHH GANTENGNYAA">
+            
+            <div class="profile-text">
+                <h2>☉ Tentang Saya ☉</h2>
+                <p>Saya adalah mahasiswa Sistem Informasi di Fakultas Ilmu Komputer, Universitas Brawijaya, dengan minat di bidang pemrograman dan Manajemen Bisnis. Selama kuliah, saya semakin tertarik pada analisis, memahami berbagai jenis dan penerapannya dalam bisnis, serta manajemen operasional untuk mengelola bisnis secara efektif.</p>
 
-                    <br><br>Selama masa studi, saya akan fokus belajar di kelas, aktif dalam organisasi dan kepanitiaan, serta mengikuti kompetisi di bidang pemrograman dan analisis bisnis. Tentunya, saya juga akan berusaha memberikan yang terbaik.
+                <p>Selama masa studi, saya akan fokus belajar di kelas, aktif dalam organisasi dan kepanitiaan, serta mengikuti kompetisi di bidang pemrograman dan analisis bisnis. Tentunya, saya juga akan berusaha memberikan yang terbaik.</p>
                 
-                    <br><br>Tujuan karier saya adalah menjadi seorang pengusaha yang selaras dengan bidang studi saya, yaitu entrepreneurship—menjadi pebisnis yang tidak hanya bermanfaat bagi banyak orang, tetapi juga tetap peduli terhadap lingkungan.</font></p>
-                </td>
-            </tr>
-        </table>
+                <p>Tujuan karier saya adalah menjadi seorang pengusaha yang selaras dengan bidang studi saya, yaitu entrepreneurship, menjadi pebisnis yang tidak hanya bermanfaat bagi banyak orang, tetapi juga tetap peduli terhadap lingkungan.</p>
+            </div>
+        </div>
     </center>
     <hr>
-    <!-- Riwayat Pendidikan -->
     <h2>📖 Pendidikan 📖</h2>
     <hr class="thin-hr">
     <table>
@@ -164,7 +200,6 @@
         </tr>
         
     </table>
-
     <hr>
     <center>
         <h2>🏆 Pengalaman 🏆</h2>
@@ -184,7 +219,6 @@
     <hr>
     <center>
         <h2>📜 Keahlian 📜</h2>
-        <hr class="thin-hr">
         <table class="info-table">
             <tr>
                 <th>Skills</th>
@@ -210,26 +244,26 @@
         <table class="info-table">
             <tr>
                 <td>📧 Email:</td>
-                <td><a href="mailto:ramadahkuliah05@student.ub.ac.id?subject=Halo&body=Halo Rama..., saya ingin bertanya...">ramadahkuliah05@student.ub.ac.id</a></td>
+                <td><a href="mailto:ramadahkuliah05@student.ub.ac.id?subject=Halo&body=Halo Rama..., saya ingin bertanya..." title="Email">ramadahkuliah05@student.ub.ac.id</a></td>
             </tr>
             <tr>
                 <td>🔗 LinkedIn:</td>
-                <td><a href="https://www.linkedin.com/in/akbarrama12" target="_blank"> linkedin.com/in/akbarrama12</a></td>
+                <td><a href="https://www.linkedin.com/in/akbarrama12" target="_blank" title="LinkedIn"> linkedin.com/in/akbarrama12</a></td>
             </tr>
             <tr>
                 <td>💻 GitHub:</td>
-                <td><a href="https://github.com/Rama-wlee"  target="_blank">github.com/Rama-wlee</a></td>
+                <td><a href="https://github.com/Rama-wlee"  target="_blank" title="GitHub">github.com/Rama-wlee</a></td>
             </tr>
             <tr>
                 <td>📱 Telepon:</td>
-                <td><a href="tel:+6281232167787"  target="_blank">+62 812-3216-7787</a></td>
+                <td><a href="tel:+6281232167787"  target="_blank" title="Nomor Telepon">+62 812-3216-7787</a></td>
             </tr>
         </table>
     </center>
     <hr>
     <center>
         <h2>📌 Alamat Rumah 📌</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d565.0027714627055!2d112.62202360118873!3d-7.939694804522096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629e04577641b%3A0x927ad238b3e132d6!2s3J6C%2B3QM%2C%20Blk.%20P%2C%20Mojolangu%2C%20Kec.%20Lowokwaru%2C%20Kota%20Malang%2C%20Jawa%20Timur%2065144!5e0!3m2!1sen!2sid!4v1739850687228!5m2!1sen!2sid" width="1000" height="450"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d565.0027714627055!2d112.62202360118873!3d-7.939694804522096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629e04577641b%3A0x927ad238b3e132d6!2s3J6C%2B3QM%2C%20Blk.%20P%2C%20Mojolangu%2C%20Kec.%20Lowokwaru%2C%20Kota%20Malang%2C%20Jawa%20Timur%2065144!5e0!3m2!1sen!2sid!4v1739850687228!5m2!1sen!2sid" ></iframe>
     </center>
     <hr>
     <table bgcolor="#c2a36b">
